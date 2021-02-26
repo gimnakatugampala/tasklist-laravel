@@ -305,3 +305,18 @@ body {
     max-width: 600px;
     margin: auto;
 }
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: #d0d3d4;
+    margin: 0;
+    text-align: center;
+    p {
+        padding: 20px;
+        margin: 0;
+    }
+}

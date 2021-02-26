@@ -13,6 +13,10 @@
 
 <body class="antialiased">
     @yield('content')
+
+    <footer>
+        <p>Gimna Katugampala Production</p>
+    </footer>
 </body>
 
 </html>
