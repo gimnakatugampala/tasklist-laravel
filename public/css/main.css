@@ -375,3 +375,8 @@ video {
 body {
   font-family: "Nunito";
 }
+
+.card {
+  max-width: 600px;
+  margin: auto;
+}
