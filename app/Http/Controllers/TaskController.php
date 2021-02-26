@@ -20,4 +20,12 @@ class TaskController extends Controller
         $task->delete();
         return redirect('/');
     }
+
+    public function create()
+    {
+        $task = new Task();
+        $task->task = request('task');
+        $task->save();
+        return redirect('/');
+    }
 }

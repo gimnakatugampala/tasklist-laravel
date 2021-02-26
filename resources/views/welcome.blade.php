@@ -17,7 +17,8 @@
         </div>
         <div class="card-body">
             <h5 class="card-title">Task</h5>
-            <form class="row">
+            <form class="row" method="POST" action="/">
+                @csrf
                 <div class="mb-3 col-md-12">
                     <input type="text" class="form-control form-control-lg" name="task" placeholder="Add Task..">
                 </div>

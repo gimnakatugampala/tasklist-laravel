@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [TaskController::class, 'index']);
+Route::post('/', [TaskController::class, 'create']);
 Route::get('/{id}', [TaskController::class, 'destroy']);
 
 // Route::get('/', function () {
