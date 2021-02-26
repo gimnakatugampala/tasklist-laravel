@@ -28,15 +28,15 @@
 
 
     <!--All Tasks-->
-    <div class="card mx-auto mt-5">
+    <div class="card mx-auto mt-5 mb-5">
         <div class="card-header">
             Current Task
         </div>
         <ul class="list-group">
             <li class="list-group-item disabled" aria-current="true">Tasks</li>
-            <li class="list-group-item">First Task <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</button></li>
-            <li class="list-group-item">Second Task<button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</button></li>
-            <li class="list-group-item">Third Task<button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</button></li>
+            @foreach($tasks as $task)
+            <li class="list-group-item">{{$task->task}} <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</button></li>
+            @endforeach
         </ul>
     </div>
     @endsection
