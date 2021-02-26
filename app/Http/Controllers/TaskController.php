@@ -13,4 +13,11 @@ class TaskController extends Controller
 
         return view('welcome', ['tasks' => $tasks]);
     }
+
+    public function destroy($id)
+    {
+        $task = Task::findOrFail($id);
+        $task->delete();
+        return redirect('/');
+    }
 }

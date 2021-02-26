@@ -35,7 +35,13 @@
         <ul class="list-group">
             <li class="list-group-item disabled" aria-current="true">Tasks</li>
             @foreach($tasks as $task)
-            <li class="list-group-item">{{$task->task}} <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</button></li>
+            <li class="list-group-item">{{$task->task}}
+                <form action="/{{$task->id}}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <a type="button" class="btn btn-danger" href="/{{$task->id}}"><i class="fas fa-trash-alt"></i> Delete</a>
+                </form>
+            </li>
             @endforeach
         </ul>
     </div>
